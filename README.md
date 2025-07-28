@@ -49,8 +49,8 @@ incorrect codes, saving 90% of your and your system's time and energy to
 find wireless network passwords.
 
 The good news is that you don't have to write such a program yourself.
-I've done it for you. The code is written in C and is much faster than
-an equivalent Python script.
+I've done it for you. The code is written in ANSI C and is much faster
+than an equivalent Python script.
 
 To compile the program, just run the `make` command in the cloned
 folder. If you don't have `make`, you can install it, or compile the
