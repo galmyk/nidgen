@@ -1,5 +1,10 @@
 # Iranian National Code Generator
 
+> **TLDR**:  
+> You can use this tool to create dictionary files filled with valid
+> Iranian national codes to use as a dictionary file for `wifite` or
+> other WiFi and password cracking tools.
+
 I don't have wired connection and I have to use one of the Iranian
 mobile operators for my internet connection. Unfortunately, due to
 military unrest in the middle east, internal political and social
