@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <string.h>
 
 #define HELP "[-h] [--help] [-v] [--verbose] [prefix1 [prefix2 ...]]"
-#define HAS_ARG(v, shrt, lng) (!strcmp (v, shrt) || !strcmp (v, lng))
+#define ARG_IS(v, shrt, lng) (!strcmp (v, shrt) || !strcmp (v, lng))
 
 void
 next (int n, int len, int checksum)
@@ -46,12 +46,12 @@ main (int argc, char **argv)
   const char *arg;
 
   for (iarg = 1; arg = argv[iarg], iarg < argc; ++iarg)
-    if (HAS_ARG (arg, "-h", "--help"))
+    if (ARG_IS (arg, "-h", "--help"))
       {
         printf ("USAGE: %s %s\n", argv[0], HELP);
         return EXIT_SUCCESS;
       }
-    else if (HAS_ARG (arg, "-v", "--verbose"))
+    else if (ARG_IS (arg, "-v", "--verbose"))
       verbose = 1;
     else
       nprefixes += 1;
@@ -67,7 +67,8 @@ main (int argc, char **argv)
   for (iarg = 1, iprefix = 0; iarg < argc; ++iarg)
     {
       arg = argv[iarg];
-      if (HAS_ARG (arg, "-v", "--verbose"))
+
+      if (ARG_IS (arg, "-v", "--verbose"))
         continue;
 
       if (verbose)
@@ -85,8 +86,8 @@ main (int argc, char **argv)
           continue;
         }
 
-      prefix = atol (arg);
-      if (len > 9 || prefix < 0L)
+      prefix = atoi (arg);
+      if (len > 9 || prefix < 0)
         {
           fprintf (stderr, "ERROR: out of 0..999999999 range: %s\n", arg);
           continue;
