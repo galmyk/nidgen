@@ -1,4 +1,4 @@
-# https://github.com/galmyk/nidgen
+# Iranian National Code Generator
 
 I use one of the Iranian mobile operators for my internet connection. Unfortunately, due to military unrest in the region, internal political and social conflicts, frequent power outages (which certainly affect BTSes) and various other reasons, I often encounter frequent internet outages or instability (several times a day and for hours a day in total).
 
