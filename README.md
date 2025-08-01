@@ -10,7 +10,7 @@ mobile operators for my internet connection. Unfortunately, due to
 military unrest in the middle east, internal political and social
 conflicts, frequent power outages (which certainly affect BTSes) and
 various other reasons, I often encounter frequent internet outages or
-instability (several times a day and for hours a day in total).
+instabilities (several times a day and for hours a day in total).
 
 Nowadays, a fast and high quality network connection is our inalienable
 right. All people need it for everyday life, let alone people like me
@@ -26,13 +26,13 @@ unbearable and can't get any worse, you are wrong:
 
 One day, while I was writing code at work and needed to install a Golang
 package, I encountered an internet outage. Due to the urgent need for
-internet and a to have a little fun, I installed the `wifite` package
+internet and to have a little fun, I installed the `wifite` package
 (a tool to attack encrypted wireless networks) on my Arch Linux to
-access my neihbour's wireless network connections (hoping they have a
+access my neighbour's wireless network connections (hoping they have a
 copper or fiber optic broadband connection). Of the several wireless
 networks available, approximately 25% did have WPS enabled, and within a
 few seconds, I extracted their passwords. What was interesting to me was
-that the passwords for two networks were national codes.
+that the passwords for two networks were Iranian national codes.
 
 With this background and assuming that WPS disabled networks may also
 have national codes as their passwords, All I had to do was create a
