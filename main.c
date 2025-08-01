@@ -64,10 +64,8 @@ main (int argc, char **argv)
       return EXIT_SUCCESS;
     }
 
-  for (iarg = 1, iprefix = 0; iarg < argc; ++iarg)
+  for (iarg = 1, iprefix = 0; arg = argv[iarg], iarg < argc; ++iarg)
     {
-      arg = argv[iarg];
-
       if (ARG_IS (arg, "-v", "--verbose"))
         continue;
 
