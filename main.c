@@ -41,7 +41,7 @@ next (int n, int len, int checksum)
 int
 main (int argc, char **argv)
 {
-  int prefix, len, checksum, tmp, iarg, iprefix, valid, i, digit;
+  int prefix, len, checksum, tmp, iarg, iprefix, valid, i, idigit;
   int nprefixes = 0, verbose = 0;
   const char *arg;
 
@@ -92,8 +92,8 @@ main (int argc, char **argv)
         }
 
       checksum = 0;
-      for (tmp = prefix, digit = len; digit; --digit, tmp /= 10)
-        checksum += (11 - digit) * (tmp % 10);
+      for (tmp = prefix, idigit = len; idigit; --idigit, tmp /= 10)
+        checksum += (11 - idigit) * (tmp % 10);
 
       next (prefix, len, checksum);
     }
