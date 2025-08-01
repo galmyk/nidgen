@@ -28,14 +28,14 @@ next (int n, int len, int checksum)
 {
   int i, reminder;
 
-  if (len < 9)
-    for (i = 0; i < 10; ++i)
-      next (10 * n + i, len + 1, checksum + i * (10 - len));
-  else
+  if (len == 9)
     {
       reminder = checksum % 11;
       printf ("%09d%d\n", n, reminder < 2 ? reminder : 11 - reminder);
     }
+  else
+    for (i = 0; i < 10; ++i)
+      next (10 * n + i, len + 1, checksum + i * (10 - len));
 }
 
 int
